@@ -1,33 +1,32 @@
 import WhatsAppButton from "./WhatsAppButton";
 import styles from "./HeroSection.module.css";
 import Image from "next/image";
+import { SITE_CONFIG } from "@/config/constants";
 
 export default function HeroSection() {
   return (
     <section className={styles.hero} id="home">
-      <div className={styles.heroBg}>
-        <Image 
-          src="/hero_bg.png" 
-          alt="Reddy Anna Stadium Background" 
-          fill 
-          priority
-          className={styles.bgImage}
-        />
-        <div className={styles.overlay}></div>
-      </div>
-      
       <div className={`container ${styles.content}`}>
-        <div className={styles.badge}>🏏 INDIA'S #1 OFFICIAL BETTING PLATFORM</div>
-        
         <h1 className={`${styles.title} animate-fade-in`}>
-          <span>Reddy Anna</span> – Get Your Official Reddy Anna ID Instantly
+          <span className={styles.accent}>{SITE_CONFIG.brand.name}</span> – Get Your Official {SITE_CONFIG.brand.name} ID Instantly
         </h1>
         
-        <p className={`${styles.subtitle} animate-fade-in animate-delay-1`}>
+        <div className={`${styles.bannerWrapper} animate-fade-in animate-delay-1`}>
+          <Image 
+            src="/banners/banner1.png" 
+            alt={`${SITE_CONFIG.brand.name} Official Platform`} 
+            width={1698}
+            height={608}
+            priority
+            className={styles.mainBanner}
+          />
+        </div>
+        
+        <p className={`${styles.subtitle} animate-fade-in animate-delay-2`}>
           Join India’s leading cricket betting ID platform since 2010. Enjoy instant access, safe payments, special bonuses & 24/7 support.
         </p>
         
-        <div className={`${styles.ctaGroup} animate-fade-in animate-delay-2`}>
+        <div className={`${styles.ctaGroup} animate-fade-in animate-delay-3`}>
           <WhatsAppButton className={styles.mainCta}>
             👉 Get Reddy Anna ID Here 👈
           </WhatsAppButton>

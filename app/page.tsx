@@ -1,5 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import RegistrationSteps from "@/components/RegistrationSteps";
+import ImageBanner from "@/components/ImageBanner";
 import InfoSection from "@/components/InfoSection";
 import Features from "@/components/Features";
 import SportsCoverage from "@/components/SportsCoverage";
@@ -16,12 +18,36 @@ export default function Home() {
     <main>
       <Navbar />
       <HeroSection />
-      <InfoSection />
-      <Features />
+      
+      <RegistrationSteps />
+      
+      <ImageBanner 
+        src="/banners/banner3.png" 
+        alt="Live Sports Coverage Banner" 
+        width={1456} 
+        height={720} 
+      />
+      
       <SportsCoverage />
       <WithdrawalProcess />
+      
+      <ImageBanner 
+        src="/banners/banner5.png" 
+        alt="Bonuses and Rewards Banner" 
+        width={1456} 
+        height={720} 
+      />
+      
       <Bonuses />
       <ComparisonTable />
+      
+      <ImageBanner 
+        src="/banners/banner6.png" 
+        alt="Join Now Banner" 
+        width={1456} 
+        height={720} 
+      />
+      
       <FAQSection />
       <Testimonials />
       <ResponsibleGaming />
